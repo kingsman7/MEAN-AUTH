@@ -1,6 +1,11 @@
 const jwt = require('jsonwebtoken')
 
-
+/**
+ * It takes a user id and a user name, and returns a promise that resolves to a JWT token.
+ * @param uid - user id
+ * @param name - 'John Doe'
+ * @returns A promise that resolves to a token.
+ */
 const generateJWT = (uid, name) => {
   return new Promise((resolve, reject) => {
     const payload = { uid, name }
